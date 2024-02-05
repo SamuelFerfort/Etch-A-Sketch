@@ -6,21 +6,19 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 1000px;
     height: 100%;
+    flex-flow: column;
+    
+    margin: auto;
+
 }
 .row {
     display: flex;
     height: 6.25%;
-   background-color: red;
-    
-    
-    
 }
 .column {
     flex: 1;
     width: 6.25%;
-    
-    
+    border: 1px solid black;
 }
