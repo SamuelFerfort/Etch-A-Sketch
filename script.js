@@ -10,13 +10,15 @@ let n = 16;
 
 resizeButton.addEventListener("click", () => {
     do {
-        n = prompt("Grid size: ", "min 16");
+        n = prompt("Grid size: ", 16);
+        
+    
     }while(n < 16);
 
     while (container.firstChild) {
         container.removeChild(container.lastChild);
     }
-
+    console.log(n)
     makeGrid(n);
 })
 
@@ -67,4 +69,4 @@ function buttons (newColumn) {
 makeGrid(n);
 console.log(rows)
 console.log(columns)
-console.log(n)
+
