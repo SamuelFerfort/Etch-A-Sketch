@@ -4,7 +4,21 @@ const columns = document.getElementsByClassName("column");
 const resetColor = document.querySelector(".reset");
 const randomColorBtn = document.querySelector(".random")
 const black = document.querySelector(".black")
+const resizeButton = document.querySelector(".resize")
+let n = 16;
 
+
+resizeButton.addEventListener("click", () => {
+    do {
+        n = prompt("Grid size: ", "min 16");
+    }while(n < 16);
+
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+
+    makeGrid(n);
+})
 
 function createRow(rowNumber) {
     for (let i = 0; i < rowNumber; i++) {
@@ -30,9 +44,11 @@ function createColumn(columnNumber) {
 function randomColor() {
     return Math.floor(Math.random() * 255);
 }
-function makeGrid() {
-    createRow(16);
-    createColumn(16);
+function makeGrid(gridNumber) {
+
+    
+    createRow(gridNumber);
+    createColumn(gridNumber);
 }
 
 
@@ -48,6 +64,7 @@ function buttons (newColumn) {
 }
 
 
-makeGrid();
+makeGrid(n);
 console.log(rows)
 console.log(columns)
+console.log(n)
