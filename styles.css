@@ -22,13 +22,22 @@ body {
     
 }
 button {
-    margin-top: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border-color: rgb(255, 57, 57);
+    font-weight: bold;
+    font-size: 20px;
+    
     
     
 }   
 .header {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+.buttons {
+    
 }
 .row {
     display: flex;
@@ -41,7 +50,7 @@ button {
     border: 1px solid black;
     
 }
-h1, h3 {
+h1, h3, h2 {
     color: rgb(255, 57, 57);
     font-weight: bold;
 }
