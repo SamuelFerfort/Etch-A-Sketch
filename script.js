@@ -22,7 +22,7 @@ function createColumn(columnNumber) {
             let newColumn = document.createElement("div");
             newColumn.classList.add("column");
             buttons(newColumn);
-            resetColor.addEventListener("click", () => newColumn.style.backgroundColor = "white")
+            
             rows[i].appendChild(newColumn);
         }
     }
@@ -44,6 +44,7 @@ function buttons (newColumn) {
     black.addEventListener("click", () => {
         newColumn.addEventListener("mouseenter", () => 
         newColumn.style.backgroundColor = `black`)})
+    resetColor.addEventListener("click", () => newColumn.style.backgroundColor = "white")
 }
 
 
